@@ -1,9 +1,9 @@
 version: '3.3'
 services:
-  kodexplorer: 
-    image: kodcloud/kodexplorer
-    container_name: kodexplorer
+  qinglong: 
+    image: whyour/qinglong:latest
+    container_name: qinglong
     environment:
     volumes:
     ports:    
-      - "80:80"
+      - "5700:5700"
