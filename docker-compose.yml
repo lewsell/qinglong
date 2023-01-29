@@ -4,16 +4,17 @@ services:
     image: crawlabteam/crawlab:latest
     container_name: crawlab_example_master
     environment:
-      CRAWLAB_NODE_MASTER: "Y"
-      CRAWLAB_MONGO_HOST: "mongo"
+      CRAWLAB_NODE_MASTER: "Y"  # Y: 主节点
+      CRAWLAB_MONGO_URI: "<mongo_uri>"  # mongo uri (单独设置)
+      CRAWLAB_MONGO_HOST: "cluster0.hdzi0wi.mongodb.net"  # mongo host address
+      CRAWLAB_MONGO_PORT: "27017"  # mongo port 
+      CRAWLAB_MONGO_DB: "test"  # mongo database 
+      CRAWLAB_MONGO_USERNAME: "aesir"  # mongo username
+      CRAWLAB_MONGO_PASSWORD: "LbLchYi76vL2lr8v"  # mongo password 
+      CRAWLAB_MONGO_AUTHSOURCE: "<mongo_auth_source>"  # mongo auth source 
+      CRAWLAB_MONGO_AUTHMECHANISM: "<mongo_auth_mechanism>"  # mongo auth mechanism 
+      CRAWLAB_MONGO_AUTHMECHANISMPROPERTIES: "<mongo_auth_mechanism_properties>"  # mongo auth mechanism properties
     volumes:
       - "./.crawlab/master:/root/.crawlab"
     ports:    
       - "8080:8080"
-    depends_on:
-      - mongo
-
-  mongo:
-    image: mongo:4.2
-    container_name: crawlab_example_mongo
-    restart: always
