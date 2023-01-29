@@ -5,6 +5,5 @@ services:
     container_name: kodexplorer
     environment:
     volumes:
-      - "./.crawlab/master:/root/.crawlab"
     ports:    
       - "80:80"
