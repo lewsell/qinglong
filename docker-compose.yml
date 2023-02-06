@@ -15,6 +15,6 @@ services:
       - "5700:5700"
       
 volumes:
-  pwd:
+  pwd-pvc:
     driver_opts:
       class: csi-okteto-standard
