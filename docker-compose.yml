@@ -5,16 +5,16 @@ services:
     container_name: qinglong
     environment:
     volumes:
-- "$pwd/ql/config:/ql/config"
-- "$pwd/ql/log:/ql/log"
-- "$pwd/ql/db:/ql/db"
-- "$pwd/ql/scripts:/ql/scripts"
-- "$pwd/ql/jbot:/ql/jbot"
-- "$pwd/ql/repo:/ql/repo"
+- "pwd/ql/config:/ql/config"
+- "pwd/ql/log:/ql/log"
+- "pwd/ql/db:/ql/db"
+- "pwd/ql/scripts:/ql/scripts"
+- "pwd/ql/jbot:/ql/jbot"
+- "pwd/ql/repo:/ql/repo"
     ports:    
       - "5700:5700"
       
 volumes:
-  $pwd:
+  pwd:
     driver_opts:
       class: csi-okteto-standard
