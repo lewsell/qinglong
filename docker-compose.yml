@@ -5,12 +5,12 @@ services:
     container_name: qinglong
     environment:
     volumes:
-- "pwd/ql/config:/ql/config"
-- "pwd/ql/log:/ql/log"
-- "pwd/ql/db:/ql/db"
-- "pwd/ql/scripts:/ql/scripts"
-- "pwd/ql/jbot:/ql/jbot"
-- "pwd/ql/repo:/ql/repo"
+- "pwd-pvc:/ql/config"
+- "pwd-pvc:/ql/log"
+- "pwd-pvc:/ql/db"
+- "pwd-pvc:/ql/scripts"
+- "pwd-pvc:/ql/jbot"
+- "pwd-pvc:/ql/repo"
     ports:    
       - "5700:5700"
       
