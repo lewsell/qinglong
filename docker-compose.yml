@@ -5,7 +5,7 @@ services:
     container_name: qinglong
     environment:
     volumes:
-      - "pwd-pvc:/ql"
+      - "pwd-pvc:/"
     ports:    
       - "5700:5700"
       
